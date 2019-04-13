@@ -10,6 +10,7 @@ public class Student {
     private final int upVoteNum;
     private final String token;
 
+
     public static class Builder {
         private final String name;
         private final int student_id;
