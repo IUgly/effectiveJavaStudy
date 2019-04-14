@@ -1,9 +1,6 @@
 package acm;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author kuangjunlin
@@ -22,6 +19,7 @@ public class CheakWord {
     private Set<String> perfectWord = new HashSet<>();
     private Map<String, String> capWord = new HashMap<>();
     private Map<String, String> vowelWord = new HashMap<>();
+
     public String[] spellchecker(String[] wordlist, String[] queries) {
 
         for (String word: wordlist
@@ -72,5 +70,12 @@ public class CheakWord {
 
     public boolean isVowel(char c){
         return (c == 'a' || c == 'o' || c == 'e' || c == 'i' || c == 'u');
+    }
+
+    public static void main(String[] args) {
+        String[] wordlist = {"KiTe", "kite", "hare", "Hare"};
+        String[] queries = {"kite", "Kite", "KiTe", "Hare", "HARE", "Hear", "hear", "keti", "keet", "keto"};
+        CheakWord cheakWord = new CheakWord();
+        System.out.println(Arrays.toString(cheakWord.spellchecker(wordlist, queries)));
     }
 }
