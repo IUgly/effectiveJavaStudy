@@ -30,6 +30,7 @@ class VerticalBinaryTreeTraversal {
         List<List<Integer>> lists = v.verticalTraversal(treeNode1);
         System.out.println(lists.toString());
     }
+
     List<Location> locations = new ArrayList<>();
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         dfs(root, 0, 0);
