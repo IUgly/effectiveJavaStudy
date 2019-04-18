@@ -1,6 +1,4 @@
-package acm;
-
-import java.util.List;
+package acm.tencent;
 
 /**
  * @author kuangjunlin
