@@ -27,12 +27,10 @@ public class Main {
         int max = Integer.MIN_VALUE;
         int[] value = new int[valStr.length];
 
-        int sum = 0;
         for (int i = 0; i <= valStr.length-1; i++) {
             int o = Integer.valueOf(valStr[i]);
             max = (o > max) ? o : max;
             value[i] = o;
-            sum += o;
         }
         Arrays.sort(value);
         value[valStr.length - 1] = 0 ;

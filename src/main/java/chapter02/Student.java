@@ -19,6 +19,11 @@ public class Student {
         private int upVoteNum = 0;
         private String token;
 
+        public Builder(Student student){
+            this.name = student.name;
+            this.student_id = student.student_id;
+        }
+
         public Builder(String name, int student_id) {
             this.name = name;
             this.student_id = student_id;
@@ -68,6 +73,9 @@ public class Student {
                 .Builder("匡俊霖", 2017211903)
                 .distance(2018.11).upVoteNum(123).build();
 
+        System.out.println(kuang.toString());
+
+        kuang = new Builder(kuang).token("1112").build();
         System.out.println(kuang.toString());
     }
 }
